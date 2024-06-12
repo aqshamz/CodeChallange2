@@ -1,0 +1,74 @@
+{/* list */}
+            <div className="bg-gray-600 p-6 rounded-lg shadow-md relative">
+              <div className="w-full h-48 bg-gray-200 mb-4 relative">
+                <Image
+                  src="/RB20.jpg" // Replace with your actual image path
+                  alt="Car Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded"
+                />
+              </div>
+              <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded-lg">Driver Champion</div>
+              <h3 className="text-2xl font-bold mb-3 text-center">RB 20</h3>
+              <ul className="text-lg mb-4">
+                <li><strong>Year:</strong> 2024</li>
+                <li><strong>Wins:</strong> 6</li>
+                <li><strong>Podiums:</strong> 11</li>
+                <li><strong>Poles:</strong> 7</li>
+                <li><strong>Points:</strong> 301</li>
+              </ul>
+              {/* <Link href="/products"> */}
+              <a className="inline-block bg-gray-800 text-gray-400 px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300">Specs</a>
+              {/* </Link> */}
+            </div>
+            {/* Repeat product cards for other products */}
+            <div className="bg-gray-600 p-6 rounded-lg shadow-md relative">
+              <div className="w-full h-48 bg-gray-200 mb-4 relative">
+                <Image
+                  src="/RB19.jpg" // Replace with your actual image path
+                  alt="Car Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded"
+                />
+              </div>
+              <div className="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 rounded-lg">Constructor Champion</div>
+              <h3 className="text-2xl font-bold mb-3 text-center">RB 19</h3>
+              <ul className="text-lg mb-4">
+                <li><strong>Year:</strong> 2023</li>
+                <li><strong>Wins:</strong> 21</li>
+                <li><strong>Podiums:</strong> 30</li>
+                <li><strong>Poles:</strong> 15</li>
+                <li><strong>Points:</strong> 860</li>
+              </ul>
+              {/* <Link href="/products"> */}
+              <a className="inline-block bg-gray-800 text-gray-400 px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300">Specs</a>
+              {/* </Link> */}
+            </div>
+            {/* Repeat product cards for other products */}
+            <div className="bg-gray-600 p-6 rounded-lg shadow-md relative">
+              <div className="w-full h-48 bg-gray-200 mb-4 relative">
+                <Image
+                  src="/RB18.jpg" // Replace with your actual image path
+                  alt="Car Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded"
+                />
+              </div>
+              <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded-lg">Driver Champion</div>
+              <div className="absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded-lg">Constructor Champion</div>
+              <h3 className="text-2xl font-bold mb-3 text-center">RB 18</h3>
+              <ul className="text-lg mb-4">
+                <li><strong>Year:</strong> 2022</li>
+                <li><strong>Wins:</strong> 17</li>
+                <li><strong>Podiums:</strong> 28</li>
+                <li><strong>Poles:</strong> 8</li>
+                <li><strong>Points:</strong> 759</li>
+              </ul>
+              {/* <Link href="/products"> */}
+              <a className="inline-block bg-gray-800 text-gray-400 px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300">Specs</a>
+              {/* </Link> */}
+            </div>
+            {/* Repeat product cards for other products */}
