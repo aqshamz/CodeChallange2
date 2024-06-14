@@ -14,15 +14,15 @@ export default function Header(){
                     <Link href="/">
                         <button className="p-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">Home</button>
                     </Link>
-                    {/* <Link href="/about"> */}
+                    <Link href="/aboutus">
                         <button className="p-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">About Us</button>
-                    {/* </Link> */}
+                    </Link>
                     <Link href="/cars">
                         <button className="p-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">Cars</button>
                     </Link>
-                    {/* <Link href="/teams"> */}
-                        <button className="p-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">Teams</button>
-                    {/* </Link> */}
+                    <Link href="/crews">
+                        <button className="p-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">Crews</button>
+                    </Link>
                 </nav>
             </div>
             </header>

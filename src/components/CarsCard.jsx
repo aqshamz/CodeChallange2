@@ -5,12 +5,14 @@ import { faTrophy } from '@fortawesome/free-solid-svg-icons';
 
 export default function CarsCard({ car }){
     const {title, slug, thumbnail, info, worldChampion} = car.fields;
+    const id = car.sys.id;
+    // console.log(id)
     // console.log(worldChampion)
     return (
         <div className="bg-gray-600 p-6 rounded-lg shadow-md relative">
             <div className="w-full h-48 bg-gray-200 mb-4 relative">
             <Image
-                src={`https:${thumbnail.fields.file.url}`} // Replace with your actual image path
+                src={`https:${thumbnail.fields.file.url}`}
                 alt="Car Image"
                 layout="fill"
                 objectFit="cover"
@@ -28,9 +30,9 @@ export default function CarsCard({ car }){
                 <li><strong>{infos}</strong></li>            
             ))}
             </ul>
-            {/* <Link href="/products"> */}
-            <a className="inline-block bg-gray-800 text-gray-400 px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300">Details</a>
-            {/* </Link> */}
+            <Link href={`/cars/${slug}`}>
+            <button className="inline-block bg-gray-800 text-gray-400 px-6 py-2 rounded-full hover:bg-gray-700 transition duration-300">Details</button>
+            </Link>
         </div>
     );
 }

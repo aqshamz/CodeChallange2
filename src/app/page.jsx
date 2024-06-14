@@ -1,10 +1,14 @@
 // import { createClient } from "contentful";
+import { getDriver } from "@/api/driver";
 import Image from "next/image";
-import CarsCard from '@/components/CarsCard.jsx';
-import { getCars } from '@/api/cars'
+import DriverCard from '@/components/DriverCard';
+import Link from 'next/link';
+// import { getCars } from '@/api/cars'
 
 export default async function Home() {
-  const cars = await getCars();
+// export default function Home() {
+
+  const driver = await getDriver();
 
   return (
     <>
@@ -32,37 +36,61 @@ export default async function Home() {
       {/* Company Overview */}
       <section className=" py-20">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">About Us</h2>
-          <p className="text-lg mb-8">Born from Red Bull founder Dietrich Mateschitz’s desire to disrupt the status quo in F1 and to bring back the swashbuckling spirit of grand prix racing’s golden age, the Team established itself as a maverick force that played hard off track but worked even harder on it. And with Christian Horner as the sport’s youngest team principal, Red Bull Racing made an immediate impression.</p>
-          {/* <Link href="/about"> */}
-            <a className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300">Read More</a>
-          {/* </Link> */}
+          <h2 className="text-3xl font-bold mb-8">Who We Are</h2>
+          <p className="text-lg mb-8">
+            Oracle Red Bull Racing is a premier Formula 1 team renowned for its competitive spirit and innovative engineering. 
+            Based in Milton Keynes, England, the team has achieved significant success since its debut in 2005. 
+            With a strong partnership with Oracle and a commitment to pushing technological boundaries, Red Bull Racing has secured multiple Constructors' and Drivers' Championships. 
+            The team's dynamic driver lineup, including stars like Max Verstappen, continues to captivate fans and maintain Red Bull Racing's position at the forefront of the Formula 1 grid.
+          </p>
+          <Link href="/aboutus">
+            <button className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300">Learn More</button>
+          </Link>
         </div>
       </section>
 
       {/* Products or Services */}
-      <section className="py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Cars</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cars.map(car => (
-            <CarsCard key={car.sys.id} car={car}/>
-          ))}
+      <section className="relative h-screen bg-gray-900 text-white flex items-center">
+        <Image
+          src="/TeamPhoto.png"
+          alt="Redbull Team"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="z-0"
+        />
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-50 z-10"></div>
+        <div className="container mx-auto relative z-20 h-full">
+          <div className="absolute top-4 left-4 flex items-center mb-4">
+            <Image src="/f1logonobg.png" width={40} height={40} alt="F1 Logo" />
+            <h1 className="text-4xl font-bold ml-2">2024 Season</h1>
+          </div>
+          <div className="absolute top-20 left-4 flex flex-wrap text-sm space-x-2">
+            <span>RB20 Car</span>
+            <span>9 Races</span>
+            <span>6 Wins</span>
+            <span>11 Podiums</span>
+            <span>7 Poles</span>
+          </div>
+          <div className="absolute bottom-4 left-4 flex items-center">
+            <Image src="/Mexico.png" width={30} height={20} alt="Mexico Flag" />
+            <span className="ml-2 text-lg">Sergio Perez</span>
+          </div>
+          <div className="absolute bottom-4 right-4 flex items-center">
+            <span className="mr-2 text-lg">Max Verstappen</span>
+            <Image src="/Netherland.png" width={30} height={20} alt="Netherlands Flag" />
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className=" py-20">
+      {/* Notable Drivers */}
+      <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Testimonials</h2>
-          <div className="grid grid-cols-3 gap-8">
-            {/* Testimonial Cards */}
-            <div className="bg-gray-600 p-6 rounded-lg shadow-md">
-              <div className="w-full h-48 bg-gray-200 mb-4"></div>
-              <p className="text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed magna quis lorem gravida rhoncus.</p>
-            </div>
-            {/* Repeat testimonial cards for other testimonials */}
+          <h2 className="text-3xl font-bold mb-8 text-center">Notable Drivers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {driver.map(driver => (
+              <DriverCard key={driver.sys.id} driver={driver}/>
+            ))}
           </div>
         </div>
       </section>
