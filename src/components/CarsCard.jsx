@@ -26,8 +26,8 @@ export default function CarsCard({ car }){
             )}            
             <h3 className="text-2xl font-bold mb-3 text-center">{title}</h3>
             <ul className="text-lg mb-4">
-            {info.map(infos => (
-                <li><strong>{infos}</strong></li>            
+            {info.map((infos, index) => (
+                <li key={index}><strong>{infos}</strong></li>            
             ))}
             </ul>
             <Link href={`/cars/${slug}`}>
