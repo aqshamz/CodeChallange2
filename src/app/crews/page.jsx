@@ -24,8 +24,8 @@ export default function Crews() {
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold mb-8 text-center">Crews</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {users.map(user => (
-                    <div className="bg-gray-600 p-6 rounded-lg shadow-md relative">
+                    {users.map((user, index) => (
+                    <div key={index} className="bg-gray-600 p-6 rounded-lg shadow-md relative">
                         <div className="w-full h-48 bg-gray-200 mb-4 relative">
                             <img
                                 src={user.picture.thumbnail}
