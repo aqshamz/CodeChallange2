@@ -1,13 +1,9 @@
-// import { createClient } from "contentful";
 import { getDriver } from "@/api/driver";
 import Image from "next/image";
 import DriverCard from '@/components/DriverCard';
 import Link from 'next/link';
-// import { getCars } from '@/api/cars'
 
 export default async function Home() {
-// export default function Home() {
-
   const driver = await getDriver();
 
   return (
@@ -26,7 +22,7 @@ export default async function Home() {
         <div className="container mx-auto relative z-20">
           <div className="max-w-xl text-left">
             <h1 className="text-4xl font-bold mb-4">Oracle Redbull Racing Team</h1>
-            <p className="text-lg italic mb-2">"Our mission is simple – to win and to do it differently."</p>
+            <p className="text-lg italic mb-2">&quot;Our mission is simple – to win and to do it differently.&quot;</p>
             <p className="text-lg mb-2">6-time Constructor Championship</p>
             <p className="text-lg">7-time Driver Championship</p>
           </div>
@@ -40,8 +36,8 @@ export default async function Home() {
           <p className="text-lg mb-8">
             Oracle Red Bull Racing is a premier Formula 1 team renowned for its competitive spirit and innovative engineering. 
             Based in Milton Keynes, England, the team has achieved significant success since its debut in 2005. 
-            With a strong partnership with Oracle and a commitment to pushing technological boundaries, Red Bull Racing has secured multiple Constructors' and Drivers' Championships. 
-            The team's dynamic driver lineup, including stars like Max Verstappen, continues to captivate fans and maintain Red Bull Racing's position at the forefront of the Formula 1 grid.
+            With a strong partnership with Oracle and a commitment to pushing technological boundaries, Red Bull Racing has secured multiple Constructors&apos; and Drivers&apos; Championships. 
+            The team&apos;s dynamic driver lineup, including stars like Max Verstappen, continues to captivate fans and maintain Red Bull Racing&apos;s position at the forefront of the Formula 1 grid.
           </p>
           <Link href="/aboutus">
             <button className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300">Learn More</button>
