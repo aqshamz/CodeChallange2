@@ -103,7 +103,7 @@ export default function Aboutus(){
                     <div className="flex justify-center">
                         <button
                             onClick={toggleShowMore}
-                            className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300"
+                            className="bg-gray-900 text-white px-6 py-3 rounded-lg border-2 hover:bg-gray-700 transition duration-300"
                         >
                             {showMore ? 'Hide' : 'Read More'}
                         </button>
