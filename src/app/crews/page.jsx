@@ -27,10 +27,12 @@ export default function Crews() {
                     {users.map((user, index) => (
                     <div key={index} className="bg-gray-600 p-6 rounded-lg shadow-md relative">
                         <div className="w-full h-48 bg-gray-200 mb-4 relative">
-                            <img
+                            <Image
                                 src={user.picture.thumbnail}
                                 alt="Crew Image"
-                                className="w-full h-full object-cover rounded"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded"
                             />
                         </div>         
                         <h3 className="text-2xl font-bold mb-3 text-center">{user.name.first} {user.name.last}</h3>
